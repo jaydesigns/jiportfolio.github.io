@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jay Indino Designs</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="myCSS/style.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Lato:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:500,600,700" rel="stylesheet">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
+        <!--MY OWN JAVASCRIPT-->
+        <script type="text/javascript" src="myJS/fadeAnimation.js"></script>
+        
+    </head>
+    <body id="splitScreen">
+        <script>
+         fadeAnimation();
+        </script>
+        <!--
+
+            NAVIGATION
+
+            -->
+            <button id="menuButton" style="color: #fff;">MENU</button>
+        
+            <div id="dropdown-content1">
+                <nav>
+                    <ul>
+                        <li id="workmenu"><a href="#">work</a></li>
+                        <div id="submenu">
+                            <ul>
+                                <li><a class="anchor" href="landing.html">Digital Designs</a></li>
+                                <li><a class="anchor" href="print.html">Print Designs</a></li>
+                            </ul>
+                        </div>
+                        <li><a class="anchor" href="#">about</a></li>
+                        <li><a class="anchor" href="#">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        
+        <div class="main-wrapper row">
+            <a class="anchor" id="left-screen" href="landing.html">
+                    <p style="color: white;">DIGITAL DESIGNS</p>
+            </a>
+            <a class="anchor" id="right-screen" href="print.html">
+                    <p>PRINT DESIGNS</p>
+            </a>
+        </div>
+        
+        
+        <script>
+        //DROPDOWN TOGGLE
+            //
+            //
+            $(document).ready(function(){
+                $("#menuButton").click(function(){
+                    var x = document.getElementById("menuButton");
+                    if (x.innerHTML === "MENU") {
+                        x.innerHTML = "CLOSE";
+                    } else {
+                        x.innerHTML = "MENU";
+                    }
+                    $("#dropdown-content1").slideToggle(350);
+                    $("#dropdown-background").slideToggle(350);
+                    $("#fullName").fadeToggle(500);
+                    $("#myTitle").fadeToggle(500);
+                });
+            });
+            
+            //
+            //SUBMENU TOGGLE
+            //
+            //
+            $(document).ready(function(){
+                $("#workmenu").click(function(){
+                    $("#submenu").slideToggle(350);
+                });
+            });
+    </script>
+    </body>
+</html>

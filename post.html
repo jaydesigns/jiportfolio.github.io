@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jay Indino Designs</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="myCSS/reading.css">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Lato:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:500,600,700" rel="stylesheet">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- SCROLL EFFECTS -->
+        <script src="myJS/scrollify.js"></script>
+        <script src="myJS/waypoints.js"></script>
+    </head>
+    <body>
+        <script>
+            fadeAnimation();
+        </script>
+        
+        <!--
+
+            NAVIGATION
+
+            -->
+            
+        
+        
+        <div id="readingMode">
+            <div id="leftPanel" style="color:#fff;">
+                <button id="menuButton">MENU</button>
+        
+            <div id="dropdown-content">
+                <div id="dropdown-background">
+                </div>
+                <nav>
+                    <ul>
+                        <li id="workmenu"><a href="#">work</a></li>
+                        <div id="submenu">
+                            <ul>
+                                <li><a class="anchor" href="landing.html">Digital Designs</a></li>
+                                <li><a href="print.html">Print Designs</a></li>
+                            </ul>
+                        </div>
+                        <li><a class="anchor" href="#">about</a></li>
+                        <li><a class="anchor" href="#">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+                <p id="text1">
+                    Surface Laptop complements style with an Alcantara fabric-covered keyboard, PixelSense display, &amp; fast charging - in a slim, elegant, ultra-light laptop
+                </p>
+            </div>
+            <div id="rightPanel">
+                <header style="background-image: url(img/dvd.jpg); background-size: 50%;">
+                    <span id="articleTitle">
+                        This is where the title of the article goes
+                    </span>
+                    
+                    <span id="subTitle">This is the subtitle</span>
+                    
+                </header>
+                <div id="content">
+                    <div class="verse text1" style="background-image:url(img/surface_laptop.png); background-size: cover;" >
+                    </div>
+                    
+                    <div class="verse text2" style="background-image:url(img/surface_laptop.png); background-size: cover;">
+                    </div>
+                    
+                    <div class="verse text3" style="background-image:url(img/surface_laptop.png); background-size: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <script type="text/javascript">
+        $(function() {
+            $.scrollify({
+                section: ".verse",
+                
+                before: function(section) {
+                    if(section===1) {
+                        $('#text1').fadeIn(1500);
+                        console.log(section);
+                    } if (section!==1) {
+                        $('#text1').fadeOut(300);
+                    }
+                } 
+            });
+        });
+    </script>    
+
+        
+    <script>
+        //DROPDOWN TOGGLE
+            //
+            //
+            $(document).ready(function(){
+                $("#menuButton").click(function(){
+                    var x = document.getElementById("menuButton");
+                    if (x.innerHTML === "MENU") {
+                        x.innerHTML = "CLOSE";
+                    } else {
+                        x.innerHTML = "MENU";
+                    }
+                    $("#dropdown-content").slideToggle(350);
+                    $("#dropdown-background").slideToggle(350);
+                    $("#fullName").fadeToggle(500);
+                    $("#myTitle").fadeToggle(500);
+                });
+            });
+            
+            //
+            //SUBMENU TOGGLE
+            //
+            //
+            $(document).ready(function(){
+                $("#workmenu").click(function(){
+                    $("#submenu").slideToggle(350);
+                });
+            });
+    </script>    
+        
+        
+        
+    </body>
+</html>

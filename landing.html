@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Jay Indino
+	</title>
+	<link rel="stylesheet" href="myCSS/style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Lato:400,400i,700,700i" rel="stylesheet">
+        
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--My OWN Javascript-->
+    <script type="text/javascript" src="myJS/hover.js"></script>
+    <script type="text/javascript" src="myJS/fadeAnimation.js"></script>
+    
+    
+    <link rel="stylesheet" href="myCSS/responsive_grid.css">
+</head>
+    
+    
+<body id="body">
+    <script>
+        fadeAnimation();
+    </script>
+    
+    
+<!--
+
+LOGO
+
+-->
+<div class="row">        
+    <div id="sidebar">
+        
+            <!--
+
+            NAVIGATION
+
+            -->
+            <button id="menuButton">MENU</button>
+        
+            <div id="dropdown-content">
+                <div id="dropdown-background">
+                </div>
+                <nav>
+                    <ul>
+                        <li id="workmenu"><a href="#">work</a></li>
+                        <div id="submenu">
+                            <ul>
+                                <li><a class="anchor" href="landing.html">Digital Designs</a></li>
+                                <li><a class="anchor" href="print.html">Print Designs</a></li>
+                            </ul>
+                        </div>
+                        <li><a class="anchor" href="#">about</a></li>
+                        <li><a class="anchor" href="#">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        
+        
+        <div id="logo-landing">
+        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+        <style type="text/css">
+            .st0{fill:none;stroke:#FFFFFF;stroke-width:66;stroke-miterlimit:10;}
+        </style>
+        <g>
+            <path class="st0" d="M437,0v397c0,0,1,68-42,114s-114.2,78-183.3,41.4"/>
+    <!--
+            <path class="st1" d="M172.8,530.5C152,519,65,432,129,319c67.4-119,197.9-77.3,207.3-71.2"/>
+    -->
+        </g>
+        </svg>
+
+        </div>
+        <h1 id="fullName">Jay Indino</h1>
+        <p id="myTitle">Graphic Designer</p>
+    </div>
+
+    <div id="content-gallery">
+        <a class="anchor grid-item box-1" href="post.php">
+            <div class="text">
+                <p class="altText">This is number 1</p>
+                <img alt="Book Arts" src="img/bookArts.jpg">
+                
+            </div>
+        </a>
+        <div class="grid-item box-2">
+            <div class="text">
+                <p class="altText">This is number 2</p>
+                <img alt="Book Arts" src="img/8.jpg">
+            </div>
+        </div>
+        <div class="grid-item box-3">
+            <div class="text">
+            <p class="altText">This is number 3</p>
+            </div>
+        </div>
+        <div class="grid-item box-4">
+            <div class="text"><p class="altText">This is number 4</p></div>
+        </div>
+        <div class="grid-item box-5">
+            <div class="text">
+                <p class="altText">This is number 5</p>
+                <img alt="Book Arts" src="img/kap.jpg">
+            </div>
+        </div>
+        <div class="grid-item box-6" id="box-6">
+            <div class="text">
+                <p class="altText">This is number 6</p>
+                <img id="projectImage" alt="Book Arts" src="img/accordion_book.jpg">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="text">
+                <p class="altText">This is number 7</p>
+                <img alt="Book Arts" src="img/mag.jpg">
+            </div>
+        </div>
+        <div class="grid-item box-8">
+            <div class="text">
+                <p class="altText">This is number 8</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="text">
+                <p class="altText">This is number 9</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="text">10</div>
+        </div>
+        <div class="grid-item box-11">
+            <div class="text">
+                <img alt="Book Arts" src="img/dvd.jpg">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="text">12</div>
+        </div>
+        <div class="grid-item box-13">
+            <div class="text">13</div>
+        </div>
+        <div class="grid-item box-14">
+            <div class="text">14</div>
+        </div>
+        <div class="grid-item">
+            <div class="text">15</div>
+        </div>
+    </div>
+</div>
+    
+    
+<! --
+    JAVASCRIPT goes here
+    -->
+    
+    <script>
+        
+    window.addEventListener('load', function() {
+		$("#logo-landing").fadeOut(2000, function() {
+			document.getElementById("sidebar").style.animation ="resizeBar 1.5s ease-out forwards";
+            document.getElementById("sidebar").style.width = "41%";
+            $("#fullName").fadeIn(750);
+            $("#myTitle").fadeIn(2000); 
+			});
+		
+            
+        });
+    
+        
+        
+    /*
+    *HOVER EFFECT FOR THE
+    *GRID
+    */
+        
+    hoverGrid();        
+        
+        
+        
+    </script>
+    
+
+<!-- WORKING BUT NOT EXPECTED RESULTS
+    <script type="text/javascript" src="parallax.js"></script>
+-->
+    <script>
+        //DROPDOWN TOGGLE
+            //
+            //
+            $(document).ready(function(){
+                $("#menuButton").click(function(){
+                    var x = document.getElementById("menuButton");
+                    if (x.innerHTML === "MENU") {
+                        x.innerHTML = "CLOSE";
+                    } else {
+                        x.innerHTML = "MENU";
+                    }
+                    $("#dropdown-content").slideToggle(350);
+                    $("#dropdown-background").slideToggle(350);
+                    $("#fullName").fadeToggle(500);
+                    $("#myTitle").fadeToggle(500);
+                });
+            });
+            
+            //
+            //SUBMENU TOGGLE
+            //
+            //
+            $(document).ready(function(){
+                $("#workmenu").click(function(){
+                    $("#submenu").slideToggle(350);
+                });
+            });
+    </script>
+</body>
+</html>
