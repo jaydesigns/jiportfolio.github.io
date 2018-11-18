@@ -1,0 +1,64 @@
+
+
+/*
+*CONTENT OF THE PAGE
+*Gallery
+*/
+
+#content-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #95dee3;
+    width: 58.7%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-top: 100%;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.text {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.box-2 {
+    grid-area: 1/2/3/4;
+}
+.box-3 {
+    background-color: white;
+}
+.box-4 {
+    background-color: #95dee3;
+}
+.box-5 {
+    grid-area: 2/4/4/5;
+}
+.box-6 {
+    grid-area: 3/1/5/3;
+}
+.box-8 {
+    grid-area: 4/3/5/5;
+    padding-top: 50%;
+    background-color: #15d5d5;
+}
+.box-11 {
+    grid-area: 5/3/6/5;
+    padding-top: 50%;
+}
+.box-13 {
+    grid-area: 6/2/ span 2/ span 2;
+}
+.box-14 {
+    grid-area: 6/4/ span 2/ span 1;
+}
